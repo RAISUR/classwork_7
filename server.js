@@ -13,6 +13,11 @@ app.get('/about', function(request,response){
   response.sendFile(__dirname+'/about.html');
 });
 
+
+article.push({title:"Test 1", content:"YOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO1"});
+article.push({title:"Test 2", content:"YOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO2"});
+
+
 // var fs = require('fs');
 //   var server = http.createServer(function(req, res){
 //     res.statusCode = 200;
@@ -28,3 +33,9 @@ app.get('/about', function(request,response){
   server.listen(process.env.PORT, process.env.IP, function(){
     console.log('Server running');
   });
+  
+  app.get('/article/:articleID', function(request, response){
+  response.render('../article.ejs', {
+    article: article[request.params.articleID]
+  })
+});
