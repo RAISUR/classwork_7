@@ -13,12 +13,15 @@
   },
   "author": "",
   "license": "ISC",
-  
   "bugs": {
     "url": "https://github.com/RAISUR/classwork_7/issues"
   },
   "homepage": "https://github.com/RAISUR/classwork_7#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "mongoose": "^5.3.13"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.6"
   }
 }
